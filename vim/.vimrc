@@ -329,3 +329,17 @@ au FocusLost * :wa
 
 " we have problem with type jj - but we quickly return to command mode
 inoremap jj <ESC>:wa<CR>
+
+" ack
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+nnoremap <leader>a :Ack
+
+" fold tags
+nnoremap <leader>ft Vatzf
+
+" text-mate 're-hardwrap paragraphs of text:'
+nnoremap <leader>q gqip
+
+" enable syntastic
+let g:syntastic_enable_signs=1
