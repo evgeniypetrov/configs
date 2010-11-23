@@ -1,0 +1,7 @@
+CREATE DATABASE project_dev CHARACTER SET utf8;
+CREATE DATABASE project_test CHARACTER SET utf8;
+
+CREATE USER prj_project IDENTIFIED BY 'password';
+
+GRANT ALL ON project_dev.* to prj_project;
+GRANT ALL ON project_test.* to prj_project;
