@@ -177,6 +177,7 @@ imap <C-o> :tabnew
 " настройки taglist~
 " горячая клавиша F8 
 nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8/bin/ctags"
 
 " уберем пустые линии и ненужную инфу
 let Tlist_Compact_Format = 1

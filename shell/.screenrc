@@ -1,0 +1,14 @@
+hardstatus alwayslastline 
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+startup_message off
+defscrollback 2000
+
+vbell off        # turns off the flashing visual bell
+
+# Open several named screens at startup and run different commands in each
+screen -t  MainDev    1   
+screen -t  SecDev     2   
+screen -t  External   3   
+screen -t  server     4   
+screen -t  tunnel     5   
+screen -t  logger     6   
