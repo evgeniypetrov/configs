@@ -19,4 +19,5 @@ make
 # Just make a symlinks
 ln -s ./configs/shell/.zshrc ~/.zshrc
 ln -s ./configs/shell/.screenrc ~/.screenrc
-ln -s ./configs/shell/.gitconfig ~/.gitconfig
+
+ln -s ./configs/shell/.gitconfig.example ~/.gitconfig and modify

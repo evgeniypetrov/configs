@@ -1,0 +1,21 @@
+[user]
+  email   = email@example.com
+  name    = Foo Bar
+[color]
+  branch = true
+  diff = true
+  pager = true
+  status = true
+  interactive = auto
+[alias]
+  co = checkout
+  st = status
+  ci = commit
+  br = branch
+#[merge]
+#    summary = true
+[core]
+  editor = vim 
+[github]
+  user = your-name
+  token = place-token-here
