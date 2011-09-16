@@ -1,15 +1,69 @@
+" VUNDLE config
+" required
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" required
+Bundle 'gmarik/vundle'
+
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'wincent/Command-T'
+Bundle 'motemen/git-vim'
+Bundle 'vim-scripts/Syntastic'
+
+" vim-scripts repos
+Bundle 'ack.vim'
+"Bundle 'command-t.vim'
+Bundle 'genutils'
+"Bundle 'git.vim'
+"Bundle 'git-diff.vim'
+"Bundle 'git-log.vim'
+"Bundle 'git-status.vim'
+Bundle 'multvals.vim'
+Bundle 'The-NERD-Commenter'
+Bundle 'The-NERD-tree'
+Bundle 'rails.vim'
+Bundle 'ruby.vim'
+Bundle 'eruby.vim'
+Bundle 'surround.vim'
+"Bundle 'Syntastic.vim'
+Bundle 'taglist.vim'
+
+"Bundle 'dbtext' - wtf?
+
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required! 
+
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused
+" bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+
+" EO VUNDLE config
+
+
 "-------------------------
 " Базовые настройки
 "-------------------------
 
 " история команд
-set history=50
+set history=500
 
 " Не делать бекап файлов
 set nobackup
-
-" Включаем несовместимость настроек с Vi (ибо Vi нам и не понадобится).
-set nocompatible
 
 " Показывать положение курсора всё время.
 set ruler  
@@ -177,7 +231,7 @@ imap <C-o> :tabnew
 " настройки taglist~
 " горячая клавиша F8 
 nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8/bin/ctags"
+"let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8/bin/ctags"
 
 " уберем пустые линии и ненужную инфу
 let Tlist_Compact_Format = 1

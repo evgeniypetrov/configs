@@ -228,7 +228,7 @@ if [ "$PS1" ]; then
     [ "$PS1" = "\\s-\\v\\\$ " ] && PS1="[\u@\h \W]\\$ "
 fi
 
-source /Users/evgenp/.rvm/scripts/rvm
+#source /Users/evgenp/.rvm/scripts/rvm
 
 #if ! shopt -q login_shell ; then # We're not a login shell
 #	# Need to redefine pathmunge, it get's undefined at the end of /etc/profile
@@ -255,11 +255,16 @@ source /Users/evgenp/.rvm/scripts/rvm
 alias swa='sudo -i -u'
 alias clear_svn="find ./ -name '.svn' -exec rm -rf {} \;"
 
-alias nginx="sudo /usr/local/nginx/sbin/nginx"
-alias nginx_reload="sudo kill -HUP `cat /usr/local/nginx/logs/nginx.pid`"
-alias nginx_tops "sudo kill -15 $(ps -auxxx | egrep "[n]ginx.*master" | awk '{ print $2 }') 2>/dev/null"
+alias spec='ruby -I spec '
+alias rspec='ruby -S bundle exec rspec'
 
-alias spinxd "sudo /usr/local/Cellar/sphinx/0.9.9/bin/searchd"
+#alias nginx="sudo /usr/local/nginx/sbin/nginx"
+#alias nginx_reload="sudo kill -HUP `cat /usr/local/nginx/logs/nginx.pid`"
+#alias nginx_tops "sudo kill -15 $(ps -auxxx | egrep "[n]ginx.*master" | awk '{ print $2 }') 2>/dev/null"
+
+#alias spinxd "sudo /usr/local/Cellar/sphinx/0.9.9/bin/searchd"
+# redis-server /usr/local/etc/redis.conf
+# solr path/to/solr/config/dir
 
 #export rvm_pretty_print_flag=1
 #rvm_project_rvmrc_default=1
@@ -267,3 +272,5 @@ alias spinxd "sudo /usr/local/Cellar/sphinx/0.9.9/bin/searchd"
 
 #if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
 #[[ -r $rvm_path/scripts/completion ]] && source $rvm_path/scripts/completion
+
+[[ -s "/home/evgenp/.rvm/scripts/rvm" ]] && source "/home/evgenp/.rvm/scripts/rvm"  # This loads RVM into a shell session.

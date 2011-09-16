@@ -1,0 +1,22 @@
+# Install
+# Vim
+
+git clone git@github.com:evgeniypetrov/configs.git
+
+ln -s ./configs/vim/.vimrc ~/.vimrc
+
+git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+run vim and execute :BundleInstall
+
+# some notes for install command-t
+cd ~/.vim/bundle/command-t/ruby/command-t
+ruby extconf.rb
+make
+
+
+# Other
+# Just make a symlinks
+ln -s ./configs/shell/.zshrc ~/.zshrc
+ln -s ./configs/shell/.screenrc ~/.screenrc
+ln -s ./configs/shell/.gitconfig ~/.gitconfig
