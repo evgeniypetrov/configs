@@ -161,7 +161,7 @@ alias ll='ls -la'
 
 # rails aliases
 #alias rss='./script/server'
-alias rss='thin start '
+#alias rss='thin start '
 alias rsc='./script/console'
 
 alias mmm='echo "work"'
@@ -228,49 +228,24 @@ if [ "$PS1" ]; then
     [ "$PS1" = "\\s-\\v\\\$ " ] && PS1="[\u@\h \W]\\$ "
 fi
 
-#source /Users/evgenp/.rvm/scripts/rvm
-
-#if ! shopt -q login_shell ; then # We're not a login shell
-#	# Need to redefine pathmunge, it get's undefined at the end of /etc/profile
-#    pathmunge () {
-#		if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
-#			if [ "$2" = "after" ] ; then
-#				PATH=$PATH:$1
-#			else
-#				PATH=$1:$PATH
-#			fi
-#		fi
-#	}
-#
-#	for i in /etc/profile.d/*.sh; do
-#		if [ -r "$i" ]; then
-#			. $i
-#	fi
-#	done
-#	unset i
-#	unset pathmunge
-#fi
-# vim:ts=4:sw=4
-
 alias swa='sudo -i -u'
 alias clear_svn="find ./ -name '.svn' -exec rm -rf {} \;"
 
-alias spec='ruby -I spec '
-alias rspec='ruby -S bundle exec rspec'
-
-#alias nginx="sudo /usr/local/nginx/sbin/nginx"
-#alias nginx_reload="sudo kill -HUP `cat /usr/local/nginx/logs/nginx.pid`"
-#alias nginx_tops "sudo kill -15 $(ps -auxxx | egrep "[n]ginx.*master" | awk '{ print $2 }') 2>/dev/null"
-
-#alias spinxd "sudo /usr/local/Cellar/sphinx/0.9.9/bin/searchd"
-# redis-server /usr/local/etc/redis.conf
-# solr path/to/solr/config/dir
-
-#export rvm_pretty_print_flag=1
-#rvm_project_rvmrc_default=1
-
-
-#if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
-#[[ -r $rvm_path/scripts/completion ]] && source $rvm_path/scripts/completion
+#alias spec='ruby -I spec '
+#alias rspec='ruby -S bundle exec rspec'
+alias rspec='spec -f s -c '
 
 [[ -s "/home/evgenp/.rvm/scripts/rvm" ]] && source "/home/evgenp/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+alias gtree="git log --graph --pretty=oneline --abbrev-commit"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias restart_all="/home/evgenp/.scripts/restart_dev_env.sh"
+alias kill_skype='kill -9 $(pidof skype)'
+
+alias update_develop="/home/evgenp/.scripts/update_development.sh"
+alias view_branch="/home/evgenp/.scripts/view_branch.sh"
+alias reload_env='/home/evgenp/.scripts/restart_dev_env.sh'
+
+alias rss="/home/evgenp/.scripts/start_server.rb"
